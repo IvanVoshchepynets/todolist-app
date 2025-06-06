@@ -1,70 +1,107 @@
-# Getting Started with Create React App
+# ToDo List App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+A full-featured web application for managing tasks (To-Do), built with **React**, **Redux Toolkit**, **Material-UI**, and **Apollo Client (GraphQL Mock)**.
 
-## Available Scripts
+## Main Features
 
-In the project directory, you can run:
+- Add, edit, soft delete tasks (CRUD)
+- Task separation into **active** and **deleted**
+- Task fields: title, description, type (1–5), status, created_at, updated_at, deleted_at
+- Ability to **restore** deleted tasks
+- Sorting by: title, created_at, updated_at (ascending/descending)
+- Filtering by status: all / completed / not completed
+- Task persistence via **Redux state** and **localStorage**
+- Separate page with **GraphQL API simulation** using Apollo Client mock
+- Fully responsive design for mobile devices
 
-### `npm start`
+## Project Structure
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+todolist-app/
+├── src/
+│ ├── pages/ # Pages (Home, Deleted, AddTask, EditTask, GraphQLTasks)
+│ ├── redux/ # Redux slice and store
+│ ├── apollo/ # GraphQL mocks and schema
+│ └── App.jsx # Main app component with routing
+├── public/
+├── README.md
+└── ...
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## Tech Stack
 
-### `npm test`
+- **React**
+- **Redux Toolkit**
+- **React Router DOM**
+- **Material-UI (MUI)**
+- **Apollo Client + GraphQL Mock**
+- **localStorage**
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## How to Run the Project
 
-### `npm run build`
+1. Clone the repository  
+   `git clone https://github.com/IvanVoshchepynets/todolist-app.git`
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+2. Navigate into the project folder  
+   `cd todolist-app`
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+3. Install dependencies  
+   `npm install`
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+4. Start the development server  
+   `npm start`
 
-### `npm run eject`
+5. Open in browser  
+   [http://localhost:3000](http://localhost:3000)
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+# ToDo List App
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+Це повнофункціональний веб-додаток для керування списком справ (To-Do), створений з використанням **React**, **Redux Toolkit**, **Material-UI** та **Apollo Client (GraphQL Mock)**.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+## Основні можливості
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+- Додавання, редагування, видалення завдань (CRUD)
+- Поділ завдань на **актуальні** та **видалені**
+- Поля для кожного завдання: назва, опис, тип (1–5), статус виконання, дати створення/оновлення/видалення
+- Можливість **відновити видалене** завдання
+- Сортування за: назвою, датою створення, датою оновлення (↑↓)
+- Фільтрація за статусом: всі / виконані / невиконані
+- Збереження завдань у **Redux state** та **localStorage**
+- Вкладка із запитами через **GraphQL (Mocking через Apollo Client)**
+- Адаптивний дизайн для мобільних пристроїв
 
-## Learn More
+## 📂 Структура проєкту
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+todolist-app/
+├── src/
+│ ├── pages/ # Сторінки (Home, Deleted, AddTask, EditTask, GraphQLTasks)
+│ ├── redux/ # Redux slice і store
+│ ├── apollo/ # GraphQL mocks та schema
+│ └── App.jsx # Основний компонент з роутингом
+├── public/
+├── README.md
+└── ...
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+## Стек технологій
 
-### Code Splitting
+- **React**
+- **Redux Toolkit**
+- **React Router DOM**
+- **Material-UI (MUI)**
+- **Apollo Client + GraphQL Mock**
+- **localStorage**
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+## Як запустити проєкт
 
-### Analyzing the Bundle Size
+1. Склонуйте репозиторій  
+   `git clone https://github.com/IvanVoshchepynets/todolist-app.git`
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+2. Перейдіть у папку проєкту  
+   `cd todolist-app`
 
-### Making a Progressive Web App
+3. Встановіть залежності  
+   `npm install`
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+4. Запустіть проєкт  
+   `npm start`
 
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+5. Відкрийте в браузері  
+   [http://localhost:3000](http://localhost:3000)
