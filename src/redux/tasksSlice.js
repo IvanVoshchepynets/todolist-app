@@ -63,6 +63,7 @@ const tasksSlice = createSlice({
       },
       hardDeleteTask: (state, action) => {
         state.tasks = state.tasks.filter((t) => t.id !== action.payload);
+        saveToLocalStorage(state.tasks);
       }
       
   },
